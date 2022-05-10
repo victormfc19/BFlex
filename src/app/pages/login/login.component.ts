@@ -19,9 +19,13 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     let user = this.usuario.username;
     if(user != null){
-      if(user == 'vmflorez' || user == 'juan esteban arias'){
+      if(user == 'vmflorez' || user == 'juanariah'){
         this.router.navigate(['home'])
+      } else {
+        alert('Error al iniciar sesion')
       }
+    } else{
+      alert('Error al iniciar sesion')
     }
   }
 }
