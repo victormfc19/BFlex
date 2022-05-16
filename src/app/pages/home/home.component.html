@@ -1,1 +1,27 @@
-<p>home works!</p>
+<div>
+    <h1 class="title">Mi lista de reservas</h1>
+    <button class="button" (click)="reservar()">reservar</button>
+    <div class="reservas-container">
+        <div class="mensajeListaVacia" *ngIf="mostrarMensajeListaVacia">
+            <h2>No tienes reservas activas en este momento</h2>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Puesto</th>
+                <th scope="col">Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let reserva of listaDeReservas">
+                <th scope="row">{{reserva.id_reserva}}</th>
+                <td>{{reserva.usuario}}</td>
+                <td>{{reserva.puesto}}</td>
+                <td>{{reserva.fecha}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
